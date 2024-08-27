@@ -224,7 +224,7 @@ export default function Footer() {
                     info@aiexpertcareer.com
                   </span>
                 </Link>
-
+                <p>a</p>
                 <p className="cursor-pointer">
                   Cell:{" "}
                   <Link href="tel:+8801724866855" className="hover:text-red-700">+8801724866855</Link> , 
