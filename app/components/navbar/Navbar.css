@@ -1,0 +1,45 @@
+
+.dropdown{
+    transition: all 0.3s ease;
+  
+  }
+  .dropdown-menu{
+    border-radius: 8px;
+    box-shadow: 0px 3px 11px -1px gray;
+    transition: all 0.3s ease;
+    height: 0px;
+    padding: 0!important;
+    overflow: hidden;
+  }
+  
+  .dropdown:hover .dropdown-menu{
+    transition: all 0.3s ease;
+    /* padding: 20px; */
+    overflow: hidden;
+  
+    height: 162px!important;
+  }
+  .dropdown-menu-2{
+    border-radius: 8px;
+    box-shadow: 0px 3px 11px -1px gray;
+    transition: all 0.3s ease;
+    height: 0px!important;
+    padding: 0!important;
+    overflow: hidden;
+  }
+  
+  .dropdown:hover .dropdown-menu-2{
+    transition: all 0.3s ease;
+    padding: 5px;
+    height: 180px!important;
+  }
+  
+  
+  .glass1{
+      background: linear-gradient(35deg, rgba(255, 255, 255, 0.491), rgba(206, 203, 203, 0));
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 0 ;
+      /* border:1px solid rgba(255, 255, 255, 0.18); */
+      /* box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.37); */
+  }

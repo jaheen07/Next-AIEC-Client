@@ -2,32 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-  --foreground-rgb: black;
-  --background-start-rgb: white;
-  --background-end-rgb: white;
+  font-family: 'Inter Tight', 'Li Ador Noirrit Regular','Li Ador Noirrit SemiBold','Li Ador Noirrit Bold', sans-serif;
+  line-height: 1.5;
+  font-stretch: condensed !important;
+  color: #000000cc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%; 
+  -webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: touch;  
 }
 
-@media (prefers-color-scheme: white) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer components {
+.btn-view {
+  @apply text-lg font-semibold normal-case border-[1px] border-black hover:shadow-lg hover:bg-black hover:text-white px-8 py-2 rounded-lg;
+}
+
 }
