@@ -61,6 +61,11 @@ export default function HeroAria(){
               Select Your Track 
               {/* <FaTelegramPlane /> */}
               </Link>
+
+              {/* <Link href='/courses' className="btn-black btn-sm md:btn-md md:btn-view flex items-center w-2/3
+                md:w-1/2 md:text-[18px]"> {language == "bn" ? "ক্যারিয়ার শুরু করুন" : "Start Your Career"}
+                <FiArrowUpRight/>
+              </Link> */}
               
 
             </div>

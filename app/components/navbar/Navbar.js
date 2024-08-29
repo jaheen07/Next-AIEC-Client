@@ -14,10 +14,10 @@ export default function Navbar(){
     const [isOpen, setIsOpen] = useState(true);
     const menuItem = (
         <>
-        
           <li>
             <Link
               href="/"
+              prefetch={true}
             //   onClick={() => setIsOpen(false)}
               className={
                 pathname === '/'
@@ -32,6 +32,7 @@ export default function Navbar(){
           <li>
             <Link
               href="/about"
+              prefetch={true}
             //   onClick={() => setIsOpen(false)}
             className={
                 pathname === '/about'
@@ -46,6 +47,7 @@ export default function Navbar(){
           <li>
             <Link
               href="/blogs"
+              prefetch={true}
             //   onClick={() => setIsOpen(false)}
             className={
                 pathname === '/blogs'
@@ -80,6 +82,7 @@ export default function Navbar(){
           <li>
             <Link
               href="/courses"
+              prefetch={true}
             //   onClick={() => setIsOpen(false)}
             className={
                 pathname === '/courses'
@@ -94,6 +97,7 @@ export default function Navbar(){
           <li>
             <Link
               href="/workshops"
+              prefetch={true}
             //   onClick={() => setIsOpen(false)}
             className={
                 pathname === '/workshops'
@@ -213,8 +217,6 @@ export default function Navbar(){
             >
                 {language === "bn" ? <p className="text-md">লগিন | সাইনআপ</p>  : <p className="text-sm">Login | SignUp</p>}
             </Link>
-
-            
 
             {/* {user ? (
                 <div className="">

@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 // import { MyContext } from "../../../Context/Context";
 // import Swal from "sweetalert2";
 // import { AiOutlineMail } from "react-icons/ai";
+import { MailOutlined } from "@ant-design/icons";
 
 
 export default function Subscribe(){
@@ -65,6 +66,7 @@ export default function Subscribe(){
     <div className="">
         <div className="flex items-center mx-auto bg-white border rounded-lg md:mx-0 w-fit">
             {/* <AiOutlineMail className="w-10 text-red-700 md:w-16" /> */}
+            <MailOutlined className="mx-4 text-red-700"/>
             <div>
             <form>
                 <input
@@ -72,7 +74,7 @@ export default function Subscribe(){
                 placeholder={language === "bn" ? "ই-মেইল" : "Email"}
                 value={mail}
                 onChange={(e) => setMail(e.target.value)}
-                className="w-full text-black border-none outline-none"
+                className="w-full text-black bg-white border-none outline-none"
                 />
                 {/* <button type="submit">Subscribe</button> */}
             </form>

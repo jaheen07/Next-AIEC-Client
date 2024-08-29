@@ -153,7 +153,7 @@ export default function Footer() {
 
           
           
-          <div className=" col-span-1 space-y-[30px] text-center md:text-left">
+          <div className=" col-span-1 space-y-[30px] md:text-left">
             <div>
               <h2 className="text-[22px] font-bold text-[#ED1B24] mb-3">
                 Contact information
@@ -179,9 +179,9 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <div className="mt-4 md:text-start md:mt-12">
+            <div className="mt-4 text-center md:text-start md:mt-12">
                 <Link href="https://www.glassdoor.com/Overview/Working-at-AI-Expert-Career-EI_IE9446630.11,27.htm">
-                  <img alt="Find us on Glassdoor." src="https://www.glassdoor.com/pc-app/static/img/partnerCenter/badges/eng_FIND_US_258x90.png" className=" w-[90%]" width="auto" height="auto"/>
+                  <img alt="Find us on Glassdoor." src="https://www.glassdoor.com/pc-app/static/img/partnerCenter/badges/eng_FIND_US_258x90.png" className="mx-auto md:mx-0 md:w-[90%]" width="auto" height="auto"/>
                 </Link>
               </div>
             
