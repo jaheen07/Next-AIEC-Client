@@ -3,9 +3,11 @@ import HomeAbout from "./Home/HomeAbout";
 import Roadmap from "./Home/Roadmap";
 import HomePartners from "./Home/HomePartners";
 import HomeCourseSection from "./Home/HomeCourseSection";
-// import getcourses from "@/lib/getcourses";
+import HomeWorkshopSection from "./Home/HomeWorkshopSection";
+import HomeTestimonial from "./Home/HomeTestimonial";
+import HomeBlogsSection from "./Home/HomeBlogsSection";
+
 export default function Home() {
-  // const course = await getcourses();
   return (
     <main>
       <HeroAria />
@@ -13,15 +15,12 @@ export default function Home() {
         <HomeAbout />
         <HomeCourseSection/>
         <Roadmap />
-        <HomePartners />
-        {/* 
-        
-        <HomeWebinarSection />
         <HomeBlogsSection />
-        <div>
-          <HomeTestimonial />  
-        </div>
-        */}
+        <HomeWorkshopSection />
+        <HomeTestimonial /> 
+        <HomePartners />
+        
+        
       </div>
     </main>
   );

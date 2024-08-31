@@ -2,6 +2,7 @@ import { Typewriter } from 'nextjs-simple-typewriter';
 import Link from 'next/link';
 import Image from 'next/image';
 import banner from '@/public/banner.svg';
+import { RiseOutlined } from '@ant-design/icons';
 
 
 
@@ -14,7 +15,7 @@ export default function HeroAria(){
         <div className="mb-[40px]" 
     style={{ background: gradientColor, backgroundRepeat: 'no-repeat',backgroundSize: 'cover',backgroundPosition: 'top'}}>
       
-      <div className="px-4 relative pt-2 mx-auto sm:max-w-xl md:max-w-full 2xl:max-w-screen-2xl md:px-24 lg:px-8 h-[100dvh]">
+      <div className="px-4 relative pt-2 mx-auto sm:max-w-xl md:max-w-full 2xl:max-w-screen-2xl md:px-24 lg:px-8 md:h-[100dvh]">
         <div className="md:flex">
           <div className="flex flex-col justify-center lg:text-start md:w-1/2 md:pl-3">
             <div className="mt-12 md:mt-16 text-[30px] sm:text-[34px] flex flex-col lg:text-[55px] xl:text-[60px] font-semibold leading-none lg:text-start pt-10 md:pt-0">
@@ -60,6 +61,7 @@ export default function HeroAria(){
               >
               Select Your Track 
               {/* <FaTelegramPlane /> */}
+              <RiseOutlined />
               </Link>
 
               {/* <Link href='/courses' className="btn-black btn-sm md:btn-md md:btn-view flex items-center w-2/3

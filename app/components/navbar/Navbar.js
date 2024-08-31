@@ -18,6 +18,7 @@ export default function Navbar(){
             <Link
               href="/"
               prefetch={true}
+              shallow={true}
             //   onClick={() => setIsOpen(false)}
               className={
                 pathname === '/'
@@ -33,6 +34,7 @@ export default function Navbar(){
             <Link
               href="/about"
               prefetch={true}
+              shallow={true}
             //   onClick={() => setIsOpen(false)}
             className={
                 pathname === '/about'
@@ -48,6 +50,7 @@ export default function Navbar(){
             <Link
               href="/blogs"
               prefetch={true}
+              shallow={true}
             //   onClick={() => setIsOpen(false)}
             className={
                 pathname === '/blogs'
@@ -83,6 +86,7 @@ export default function Navbar(){
             <Link
               href="/courses"
               prefetch={true}
+              shallow={true}
             //   onClick={() => setIsOpen(false)}
             className={
                 pathname === '/courses'
@@ -98,6 +102,7 @@ export default function Navbar(){
             <Link
               href="/workshops"
               prefetch={true}
+              shallow={true}
             //   onClick={() => setIsOpen(false)}
             className={
                 pathname === '/workshops'

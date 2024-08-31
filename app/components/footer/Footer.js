@@ -24,7 +24,7 @@ export default function Footer() {
             </Link>
             <h4 className="text-white/50 text-[18px] my-[36px]">
               <span className="text-white">Our vision</span> is to see Al as a
-              driving force behind Bangladesh's economic prosperity,
+              driving force behind Bangladesh&apos;s economic prosperity,
               Bangladeshi Al experts on the global stage and make opportunities
               for all.
             </h4>

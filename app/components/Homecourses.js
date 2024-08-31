@@ -2,7 +2,7 @@
 import { Tab } from "@headlessui/react";
 import { useRef } from "react";
 import Link from "next/link";
-// import CourseCard from "../Courses/CourseCard";
+import CourseCard from "../courses/CourseCard";
 // import Loader from "../../common/loader/Loader";
 // import { IoIosArrowBack } from "react-icons/io";
 // import { IoIosArrowForward } from "react-icons/io";
@@ -12,13 +12,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 const categories = ["Free", "Fundamental", "Professional"];
 
 export default function Homecourses({course}) {
   const courses = course;
   
-  let { language } = "en";
-  const i = 0;
+  let  language  = "en";
   let sliderRef = useRef(null);
   
   const next = () => {
@@ -145,13 +145,14 @@ export default function Homecourses({course}) {
                       .filter((course) => course.category === cat)
                       .slice(0, 8)
                       .map((filteredCourse, idx) => (
-                        <div className="px-1 my-3 md:px-4">
-                        {/* <CourseCard
+                        <div className="px-1 my-3 md:px-4" key={idx}>
+                        <CourseCard
                           key={idx}
                           course={filteredCourse}
-                        ></CourseCard> */}
+                        ></CourseCard>
                         </div>
                       ))}
+                      
                     </Slider>
                     
                     {courses.filter((course) => course.category === cat)

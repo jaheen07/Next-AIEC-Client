@@ -2,16 +2,13 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 
-
-const CourseCard = ({ course }) => {
-  // const { language } = useContext(MyContext);
+const WorkshopCard = ({ workshop }) => {
   const language = "en"
   const [openPicModalIndex, setPicOpenModalIndex] = useState("");
-  const {courseFee, discount , spdiscount} = course;
+  const {courseFee, discount , spdiscount} = workshop;
   const {
     register,
     handleSubmit,
@@ -19,10 +16,6 @@ const CourseCard = ({ course }) => {
     formState: { errors },
   } = useForm();
   const discountAmount = courseFee * ( 1 - discount / 100);
-
-
-
-
 
   const onSubmit = async (data) => {
 
@@ -65,58 +58,54 @@ const CourseCard = ({ course }) => {
     }
   };
   return (
-    
-    <div className="relative w-[100%] md:w-full bg-white rounded-xl flex flex-col shadow-md hover:shadow-xl md:h-96">
+    <div className="relative w-[100%] md:w-full bg-white rounded-t-3xl flex flex-col  shadow-md  hover:shadow-xl ">
       {
         discount ? 
-        <div className="absolute w-10 h-10 p-1 py-3 text-xs font-semibold text-white bg-red-500 rounded-full -top-3 -right-3">-{discount}%</div> : ""
+        <div className="absolute w-10 h-10 p-1 py-3 text-xs font-semibold text-white rounded-full bg-primary -top-3 -right-3">-{discount}%</div> : ""
       }
-      {course?.description ?
+      {workshop?.description ?
         (<Link
-        href={`/courses/${course.title.trim().replace(/\s+/g, '-')}`}
-        key={course._id}   
+        href={`/workshops/${workshop.title.trim().replace(/\s+/g, '-')}`}
+        key={workshop._id}   
         >
-          <img className="md:w-[100%] rounded-t-xl pt-0" src={course?.cover} alt="" width="100%" height="1"/>
+          <img className="md:w-[100%] rounded-t-3xl pt-0" src={workshop?.cover} alt="" width="100%" height="1"/>
         </Link>
         ):
-      <img className="md:w-[100%] rounded-t-xl pt-0" src={course?.cover} alt="" width="100%" height="1"/>
+      <img className="md:w-[100%] rounded-t-3xl pt-0" src={workshop?.cover} alt="" width="100%" height="1"/>
       }
-      
       <div className="p-2 mb-12">
-        <p className="pt-[10px] md:text-[17px] font-bold"><Link href={`/courses/${course.title.trim().replace(/\s+/g, '-')}`}>{course?.title}</Link>
-        </p>  
-
+        <h2 className="pt-[15px] text-[18px] font-bold ">{workshop?.title}</h2>
         <p className="text-[14px] text-[#818181]">
-          {course?.subtitle?.slice(0, 115)}...
+          {workshop?.subtitle?.slice(0, 115)}...
         </p>
 
-        <div className="absolute bottom-0 flex items-center justify-between w-full mb-3">
-          {course?.description ? (
-            <Link href={`/courses/${course.title.trim().replace(/\s+/g, '-')}`} className="btn-black">
+        <div className="absolute z-0 flex items-center justify-between w-full bottom-2">
+          {workshop?.description ? (
+            <Link href={`/workshops/${workshop.title.trim().replace(/\s+/g, '-')}`} className="btn-black">
               {language == "bn" ? "বিস্তারিত দেখুন" : "View Details"}
             </Link>
           ) : (
-            <p className="p-1 font-semibold">Coming Soon...</p>
+            <p className="p-1 font-semibold ">Coming Soon...</p>
           )}
-          {course?.description ? (
-            <p className="mr-4 font-semibold">
-              {course?.courseFee > 0 ? <>{discount ? discount != 0 ? <><span className="text-gray-500 line-through text-md">৳ {courseFee}
+          {workshop?.description ? (
+            <p className="mr-6 font-semibold ">
+              {workshop?.courseFee > 0 ? <>{discount ? discount != 0 ? <><span className="mx-2 text-gray-500 line-through text-md">৳ {courseFee}
               
-              </span> <span className="text-xl">৳{discountAmount}</span></>:"": <>{spdiscount?<span className="mr-3 text-gray-500 line-through text-md">৳ {courseFee}</span>  :""}<span className="text-xl">৳{courseFee - spdiscount}</span></>}
+              </span> <span className="text-xl">৳{discountAmount}</span></>:"": <>{spdiscount?<span className="mx-2 text-gray-500 line-through text-md">৳ {courseFee}</span>  :""}<span className="text-xl">৳{courseFee - spdiscount}</span></>}
               </>: "Free"}
             </p>
-             
+            
           ) : (
             <button
               onClick={() => {
-                const modalId = `${course._id}`;
+                const modalId = `${workshop._id}`;
                 const modal = document.getElementById(modalId);
                 setPicOpenModalIndex(modal);
                 if (modal) {
                   modal.showModal();
                 }
               }}
-              className="mr-4 btn-black"
+              className="btn-black"
             >
               Book your seat
             </button>
@@ -124,7 +113,7 @@ const CourseCard = ({ course }) => {
         </div>
       </div>
       
-      <dialog id={`${course?._id}`} className="modal">
+      <dialog id={`${workshop?._id}`} className="modal">
         <form
           onSubmit={handleSubmit(onSubmit)}
           method="dialog"
@@ -133,7 +122,7 @@ const CourseCard = ({ course }) => {
           <button
             className="absolute btn btn-sm btn-circle btn-ghost right-2 top-2"
             onClick={() => {
-              const modalId = `${course._id}`;
+              const modalId = `${workshop._id}`;
               const modal = document.getElementById(modalId);
               if (modal) {
                 modal.close();
@@ -146,7 +135,7 @@ const CourseCard = ({ course }) => {
           <div className="mb-2">
             <p className="mb-3 text-lg">
               Book Your Seat for the course : <br />{" "}
-              <span className="text-2xl font-bold">{course.title}</span>{" "}
+              <span className="text-2xl font-bold">{workshop.title}</span>{" "}
             </p>
             <p className="">Your Name:</p>
             <input
@@ -193,4 +182,4 @@ const CourseCard = ({ course }) => {
   );
 };
 
-export default CourseCard;
+export default WorkshopCard;
