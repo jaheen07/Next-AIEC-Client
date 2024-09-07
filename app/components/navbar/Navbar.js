@@ -134,7 +134,7 @@ export default function Navbar(){
       );
 
     return(
-        <div className="w-full shadow glass1 fixed top-0 z-[50]">
+        <div className="w-full shadow glass fixed top-0 z-[50]">
         {/* {filtered.length !== 0? (
         <> 
         <img src="https://cdn.ostad.app/images/other/close-circle.svg" height="20" width="40" className={`absolute top-0 right-0 p-2 mr-auto cursor-pointer ${isClose}`} onClick={()=>{setIsClose('hidden')}}/>

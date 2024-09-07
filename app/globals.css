@@ -219,3 +219,8 @@
     transform: scale(0) translate(-50%, -50%);
   }
 }
+
+.avatar > div{
+  aspect-ratio: 0 !important;
+  
+}

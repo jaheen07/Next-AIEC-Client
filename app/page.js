@@ -8,6 +8,7 @@ import HomeTestimonial from "./Home/HomeTestimonial";
 import HomeBlogsSection from "./Home/HomeBlogsSection";
 
 export default function Home() {
+  
   return (
     <main>
       <HeroAria />

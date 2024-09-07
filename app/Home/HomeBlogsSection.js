@@ -1,5 +1,5 @@
 "use client";
-import { Tab, TabGroup } from "@headlessui/react";
+import { Tab, TabGroup,TabList,TabPanel,TabPanels } from "@headlessui/react";
 import { useEffect, useState } from "react";
 import BlogCard from "../blogs/BlogCard";
 import Link from "next/link";
@@ -31,7 +31,7 @@ export default function HomeBlogsSection() {
         setBlogs(data);
         setIsLoading(false);
       });
-  }, []);
+  }, [blogs]);
   if (isLoading) return <Testing/>;
   return (
     <div className="my-20">
@@ -48,7 +48,7 @@ export default function HomeBlogsSection() {
       {/* <hr className="w-12 h-1 bg-[#FF265A]/90 rounded-full mx-auto " /> */}
       <div className="px-2 mx-auto my-10 sm:px-0">
         <TabGroup>
-          <Tab.List className="flex p-3 space-x-1 space-y-1 overflow-x-scroll text-black border rounded-lg flex-nowrap lg:flex-nowrap md:space-y-0 md:space-x-3 md:rounded-lg md:p-1 whitespace-nowrap">
+          <TabList className="flex p-3 space-x-1 space-y-1 overflow-x-scroll text-black border rounded-lg flex-nowrap lg:flex-nowrap md:space-y-0 md:space-x-3 md:rounded-lg md:p-1 whitespace-nowrap">
             {categories.map((category) => (
               <Tab
                 key={category}
@@ -65,14 +65,14 @@ export default function HomeBlogsSection() {
                 {category}
               </Tab>
             ))}
-          </Tab.List>
+          </TabList>
 
-          <Tab.Panels className="mt-2">
+          <TabPanels className="mt-2">
             {isLoading ? (
               <p>Loading...</p>
             ) : (
               categories?.map((category, index) => (
-                <Tab.Panel
+                <TabPanel
                   key={index}
                   className="bg-white rounded-full md:p-3 "
                 >
@@ -99,10 +99,10 @@ export default function HomeBlogsSection() {
                   >
                    {language == "bn" ? "আরো দেখুন" : "View More"}
                   </Link>
-                </Tab.Panel>
+                </TabPanel>
               ))
             )}
-          </Tab.Panels>
+          </TabPanels>
         </TabGroup>
       </div>
     </div>

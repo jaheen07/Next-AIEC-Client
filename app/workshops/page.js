@@ -1,5 +1,7 @@
-export default function page(params) {
-    <div>
-        sofhslfks
-    </div>
-};
+import Allworkshops from "./Allworkshops";
+
+export default function Page(){
+  return(
+    <Allworkshops/>
+  )
+}
