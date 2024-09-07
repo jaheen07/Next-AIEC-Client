@@ -17,16 +17,6 @@ export default function SidePanel(){
   // const gradientColor =
   //   'linear-gradient(176.98deg, #FFF3F8 -4.94%, #E1F9F0 42.2%, rgba(244, 213, 255, 0.96) 110.23%)';
 
-  const [scrollNav, setScrollNav] = useState(false);
-  const scrollEffect = () => {
-    if (window.scrollY >= 99) {
-      setScrollNav(true);
-    } else {
-      setScrollNav(false);
-    }
-  };
-  window.addEventListener('scroll', scrollEffect);
-
   return (
     <div className='sticky border-r-4'>
       <div

@@ -3,7 +3,8 @@ import "./Navbar.css";
 import Link from "next/link";
 import Logo from "@/public/logo.svg";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+// import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect,useState } from "react";
 import "@/app/globals.css";
 
@@ -146,7 +147,7 @@ export default function Navbar(){
             <div className="flex items-center ">
             <div>
                 <Link href="/" className="flex items-center justify-center gap-2">
-                <Image
+                <ExportedImage
                     className="pointer-events-none select-none no-select md:w-32 md:p-2"
                     src={Logo}
                     width="100"
@@ -379,7 +380,7 @@ export default function Navbar(){
                         onClick={() => setIsOpen(false)}
                         className="flex items-center justify-center gap-2"
                         >
-                        <Image className="bg-white" src={Logo} alt="" width="80" height="1"/>
+                        <ExportedImage className="bg-white" src={Logo} alt="" width="80" height="1"/>
                         </Link>
                     </div>
                     <div className="absolute my-2"></div>

@@ -1,8 +1,9 @@
 import { Typewriter } from 'nextjs-simple-typewriter';
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import banner from '@/public/banner.svg';
 import { RiseOutlined } from '@ant-design/icons';
+import ExportedImage from 'next-image-export-optimizer';
 
 
 
@@ -74,7 +75,7 @@ export default function HeroAria(){
           </div>
           <div className="flex justify-center w-full mt-8 sm:mt-0 md:w-1/2">
           {/* <img src={banner} alt="aiexpertcareer_homephoto" width="90%" className="md:mt-20"  loading="lazy"/> */}
-          <Image src={banner} className="w-[90%] md:mt-20" alt="hero image"/>
+          <ExportedImage src={banner} className="w-[90%] md:mt-20" alt="hero image"/>
           </div>
         </div>
       </div>

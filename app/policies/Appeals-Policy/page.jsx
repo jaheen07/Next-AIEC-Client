@@ -1,13 +1,6 @@
 export default function Page(){
   return (
     <>
-      <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLCLKWNK"
-         height="0"
-         width="0"
-         style="display:none;visibility:hidden">
-        </iframe>
-      </noscript>
       <div className="mb-28">
         <p className="px-4 pt-16 pb-6 text-3xl font-bold text-left text-black sm:px-9">
            Learner Appeals Policy of AI Expert Career
@@ -27,7 +20,7 @@ export default function Page(){
           
           <h2 className="mt-4 mb-2 text-xl font-bold">Scope</h2>
           
-          This policy applies to all learners enrolled in AI Expert Career's training programs, including individual learners and corporate clients.<br />
+          This policy applies to all learners enrolled in AI Expert Career&apos;s training programs, including individual learners and corporate clients.<br />
           
           <h2 className="mt-4 mb-2 text-xl font-bold">Grounds for Appeal</h2>
           
@@ -58,7 +51,7 @@ export default function Page(){
 
           <h2 className="mt-4 mb-2 font-bold text-md"> Outcome Notification (Stage 4):</h2>
          
-         <li className="pl-4">The learner will receive a written notification of the Appeals Officer's decision, including the reasons for the decision, within five (5) working days of the review completion.</li>
+         <li className="pl-4">The learner will receive a written notification of the Appeals Officer&apos;s decision, including the reasons for the decision, within five (5) working days of the review completion.</li>
 
 
          <h2 className="mt-4 mb-2 font-bold text-md " >Further Appeal Process (Stage 5):</h2>

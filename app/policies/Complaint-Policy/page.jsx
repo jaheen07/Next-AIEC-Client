@@ -1,13 +1,6 @@
 export default function Page(){
   return (
     <>
-      <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLCLKWNK"
-         height="0"
-         width="0"
-         style="display:none;visibility:hidden">
-        </iframe>
-      </noscript>
       <div className="mb-28">
         <p
           className="px-4 pt-16 pb-6 text-3xl font-bold text-left text-black sm:px-9"
@@ -26,7 +19,7 @@ export default function Page(){
           
           <h2 className="mt-4 mb-2 text-xl font-bold">Scope</h2>
           
-          This policy applies to all individuals, including learners, clients, and other stakeholders, who wish to raise a formal complaint regarding any aspect of AI Expert Career's operations, services, or interactions.<br />
+          This policy applies to all individuals, including learners, clients, and other stakeholders, who wish to raise a formal complaint regarding any aspect of AI Expert Career&apos;s operations, services, or interactions.<br />
           
           <h2 className="mt-4 mb-2 text-xl font-bold">Grounds for Appeal</h2>
           
@@ -57,7 +50,7 @@ export default function Page(){
 
           <h2 className="mt-4 mb-2 font-bold text-md"> Outcome Communication (Stage 4):</h2>
          
-         <li>The complainant will receive a written notification of the investigation's outcome, including reasons for the decision, within five (5) working days of the completion of the investigation.</li>
+         <li>The complainant will receive a written notification of the investigation&apos;s outcome, including reasons for the decision, within five (5) working days of the completion of the investigation.</li>
 
 
          <h2 className="mt-4 mb-2 font-bold text-md " >Appeal Process (Stage 5):</h2>

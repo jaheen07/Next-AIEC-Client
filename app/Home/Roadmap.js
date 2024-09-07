@@ -1,8 +1,8 @@
 import Link from "next/link";
 import roadmapImage from "@/public/roadmap.svg";
 // import { FiArrowUpRight } from "react-icons/fi";
-
 import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function Roadmap(){
   const language  = "en";
@@ -26,7 +26,7 @@ export default function Roadmap(){
         
         
       </div>
-      <Image src={roadmapImage} className="mx-auto mt-12 md:w-11/12" alt="Image Alt"/>
+      <ExportedImage src={roadmapImage} className="mx-auto mt-12 md:w-11/12" alt="Image Alt"/>
     </div>
   );
 }

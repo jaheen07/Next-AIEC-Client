@@ -33,8 +33,8 @@ const LeftNav = ({ onItemClick }) => {
     <div className="lg:pl-24"> 
       <div className="h-screen py-6 pl-4 bg-slate-50">
         
-        {allpolicies.map((e)=>(
-        <div className="mb-2">
+        {allpolicies.map((e, index)=>(
+        <div className="mb-2" key={index}>
           <div key={e} className={splited[2] == e? "text-[#283357] text-lg font-bold cursor-pointer flex items-center bg-slate-200 rounded-l-full":"text-lg font-bold flex items-center hover:bg-slate-100"}>
             <Link href={`/policies/${e.trim().replace(/\s+/g, "-")}`}>
               <p

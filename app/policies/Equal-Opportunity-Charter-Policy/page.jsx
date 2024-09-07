@@ -2,13 +2,6 @@ export default function Page(){
 
   return (
     <>
-      <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLCLKWNK"
-         height="0"
-         width="0"
-         style="display:none;visibility:hidden">
-        </iframe>
-      </noscript>
       <div className="mb-28">
         <p
           className="px-4 pt-16 pb-6 text-3xl font-bold text-left text-black sm:px-9"

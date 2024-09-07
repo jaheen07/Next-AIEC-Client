@@ -5,6 +5,7 @@ import blogI from "@/public/blog.svg"
 import magazI from "@/public/magazine.svg"
 import corpI from "@/public/corporate.png"
 import mentorI from "@/public/mentorship.png"
+import ExportedImage from "next-image-export-optimizer";
 export default function HomeAbout() {
 const language ="en";
     
@@ -96,7 +97,7 @@ const language ="en";
               
               <div className="pt-2 text-center">
               
-                <Image width="40" height="1" src={img} alt="" className="mx-auto"/>
+                <ExportedImage width="40" height="1" src={img} alt="" className="mx-auto"/>
                 
                 <h3 className="text-[20px] text-lg font-semibold mb-[10px]">
                   {language === "bn" ? headlineBn : headline}

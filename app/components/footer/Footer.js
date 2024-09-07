@@ -3,6 +3,7 @@ import Logo from "@/public/logowhite.svg";
 import footerBG from "@/public/backdrop_footer.svg";
 import Subscribe from "./Subscribe";
 import Link from "next/link";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function Footer() {
   const { language } = "bn";
@@ -14,7 +15,7 @@ export default function Footer() {
       <div className="grid grid-cols-1 gap-5 text-center text-white md:grid-cols-2 lg:grid-cols-5 md:text-start">
           <div className="col-span-2 ">
             <Link href="/" className="">
-              <Image
+              <ExportedImage
                 className="mx-auto pointer-events-none select-none no-select unselectable md:mx-px w-36 md:w-32"
                 width="1"
                 height="1"
@@ -60,11 +61,11 @@ export default function Footer() {
                     {language == "bn" ? "কোর্স সমূূহ" : "View All Courses"}
                   </Link>
                 </p>
-                <p>
+                {/* <p>
                   <Link className="hover:text-red-700" href="/ai-consultant">
                     {language == "bn" ? "ফ্রি কনসালটেন্সি" : "Free Consultancy"}
                   </Link>
-                </p>
+                </p> */}
                 <p>
                   <Link
                     className="hover:text-red-700"

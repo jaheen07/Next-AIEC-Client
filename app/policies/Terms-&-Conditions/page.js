@@ -6,7 +6,7 @@ export default function Page(){
         <p>Welcome to AI Expert Career!</p>
         <p>
           These terms and conditions outline the rules and regulations for the
-          use of AI Expert Career's Website, located at aiexpertcareer.com. By
+          use of AI Expert Career&apos;s Website, located at aiexpertcareer.com. By
           accessing this website, we assume you accept these terms and
           conditions. Do not continue to use AI Expert Career if you do not
           agree to take all of the terms and conditions stated on this page.
@@ -119,7 +119,7 @@ export default function Page(){
             does not falsely imply sponsorship, endorsement, or approval of the
             linking party and its products and/or services;
           </li>
-          <li>fits within the context of the linking party's site.</li>
+          <li>fits within the context of the linking party&apos;s site.</li>
         </ol>
         <p>
           We may consider and approve other link requests from the following
@@ -159,7 +159,7 @@ export default function Page(){
             does not falsely imply sponsorship, endorsement, or approval of the
             linking party and its products or services; and
           </li>
-          <li>fits within the context of the linking party's site.</li>
+          <li>fits within the context of the linking party&apos;s site.</li>
         </ol>
         <p>
           If you are one of the organizations listed in paragraph 2 above and
@@ -177,11 +177,11 @@ export default function Page(){
           <li>
             Using any other description of our Website being linked to that
             makes sense within the context and format of content on the linking
-            party's site.
+            party&apos;s site.
           </li>
         </ol>
         <p>
-          No use of AI Expert Career's logo or other artwork will be allowed for
+          No use of AI Expert Career&apos;s logo or other artwork will be allowed for
           linking absent a trademark license agreement.
         </p>
         <h2 className="mt-4 text-xl font-semibold">Content Liability:</h2>

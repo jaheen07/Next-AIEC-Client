@@ -2,13 +2,6 @@ export default function Page(){
 
   return (
     <>
-      <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLCLKWNK"
-         height="0"
-         width="0"
-         style="display:none;visibility:hidden">
-        </iframe>
-      </noscript>
       <div className="mb-28">
         <p
           className="px-4 pt-16 pb-6 text-3xl font-bold text-left text-black sm:px-9"
@@ -59,7 +52,7 @@ export default function Page(){
           <h2 className="mt-4 mb-2 text-xl font-bold">Review and Updates:</h2>
           
           This Course Content Review Policy will be reviewed annually to ensure its effectiveness. Updates will be made as necessary to reflect changes in industry standards and educational best practices. <br /><br />
-          Learners and stakeholders are encouraged to familiarize themselves with this policy, demonstrating AI Expert Career's commitment to excellence in professional development.
+          Learners and stakeholders are encouraged to familiarize themselves with this policy, demonstrating AI Expert Career&apos;s commitment to excellence in professional development.
           
           <p className="mt-2 font-bold">Date of Implementation: <span className="text-red-500">05 January 2024</span></p>
           <br />

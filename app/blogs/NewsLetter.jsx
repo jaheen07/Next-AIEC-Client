@@ -1,9 +1,10 @@
 "use client";
 import newsletter from "@/public/newsLetter.svg";
-import Image from "next/image";
+// import Image from "next/image";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import { MailOutlined } from "@ant-design/icons";
+import ExportedImage from "next-image-export-optimizer";
 
 const NewsLetter = () => {
   const  language  = "en"
@@ -98,7 +99,7 @@ const NewsLetter = () => {
           </div>
         </div>
         <div className="flex justify-end w-1/2 mx-auto lg:w-3/4">
-          <Image src={newsletter} alt="" className="my-2 w-[497px]  md:h-[379px]" />
+          <ExportedImage src={newsletter} alt="" className="my-2 w-[497px]  md:h-[379px]" />
         </div>
       </div>
     </>

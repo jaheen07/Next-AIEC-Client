@@ -1,4 +1,5 @@
 import getpartners from "@/lib/getpartners";
+import ExportedImage from "next-image-export-optimizer";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
@@ -17,7 +18,7 @@ export default async function HomePartners() {
                     {
                     partners?.map((p) =>(
                     <div key={p._id}>
-                    <Image
+                    <ExportedImage
                         src={p.imageURL}
                         alt="aiec_partners_logo"
                         className="mr-7"

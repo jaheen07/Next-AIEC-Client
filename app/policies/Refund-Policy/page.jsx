@@ -1,13 +1,6 @@
 export default function Page(){
     return (
         <div className="pt-16">
-          <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KLCLKWNK"
-            height="0"
-            width="0"
-            style="display:none;visibility:hidden">
-            </iframe>
-          </noscript>
           <div className="max-w-5xl pb-24 mx-4 sm:ml-9">
             <h1 className="mb-4 text-3xl font-bold">Refund or Cancellation Policy of AI Expert Career</h1>
             <p className="mb-4">
@@ -23,7 +16,7 @@ export default function Page(){
                   If a learner wants to cancel the booking after the payment, he/she will have to notify the AIEC team for cancellation at least 2 days before the scheduled starting day of the course and the learner will be refunded the full amount within 7-10 working days from placement of notification of cancellation. For cancellation notification, email- support@aiexpertcareer.com
                 </li>
                 <li className="mb-2">
-                  If the learner faces issues regarding schedule, date, time, or any other mentioned by the learners, the learner must notify our helpline number which is mentioned on our website or other respective support personnel of AIEC within 2 days of the start of the course. AIEC will try to compensate for this with other batches or possible convenient ways. If this can't be compensated, AIEC will refund that learner 80% of the paid money within 7-10 working days of the notification.
+                  If the learner faces issues regarding schedule, date, time, or any other mentioned by the learners, the learner must notify our helpline number which is mentioned on our website or other respective support personnel of AIEC within 2 days of the start of the course. AIEC will try to compensate for this with other batches or possible convenient ways. If this can&apos;t be compensated, AIEC will refund that learner 80% of the paid money within 7-10 working days of the notification.
                 </li>
                 <li>
                   No refund policy will be applicable if 2 days go past the starting date of the course.
