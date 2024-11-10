@@ -5,11 +5,22 @@ import Logo from "@/public/logo.svg";
 import { usePathname } from "next/navigation";
 // import Image from "next/image";
 import ExportedImage from "next-image-export-optimizer";
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import "@/app/globals.css";
+import SearchBox from "./SearchBox";
+import SearchMobile from "./SearchMobile";
+import { globalConfig } from "@/app/_customGlobals";
+
 
 export default function Navbar(){
-    const [language, setLanguage] = useState("en");
+    const [language, setLanguage] = useState('en');
+
+    const changelang = (value)=>{
+        localStorage.setItem("language",value);
+        setLanguage(value);
+        globalConfig.lang = value
+    }
+    
     const pathname = usePathname();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isOpen, setIsOpen] = useState(true);
@@ -81,7 +92,7 @@ export default function Navbar(){
             </NavLink>
           </li> */}
     
-          
+    
           
           <li>
             <Link
@@ -96,6 +107,23 @@ export default function Navbar(){
               }
             >
               Course
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/test"
+              state={{test:"test"}}
+              prefetch={true}
+              shallow={true}
+            //   onClick={() => setIsOpen(false)}
+            className={
+                pathname === '/test'
+                  ? "relative after:absolute after:bg-[#ED1B24] after:text-black after:w-[30px] after:h-[2px] after:rounded after:right-0 after:mx-auto after:left-0 after:bottom-[-2px] text-[#ED1B24] px-3 py-0.5 hover:text-[#ED1B24] duration-150  rounded-full"
+                  : "px-3 hover:text-[#ED1B24] duration-150"
+              }
+            >
+              test
             </Link>
           </li>
     
@@ -142,7 +170,7 @@ export default function Navbar(){
         <img src={filtered[0].offer_banner} className={`w-full h-[5vh] ${isClose}`}/>
         </>
         ):''} */}
-        <div className="relative px-4 py-1 mx-auto max-w-7xl">
+        <div className="relative px-2 py-1 mx-auto max-w-7xl">
         <div className="relative flex items-center justify-between font-bold ">
             <div className="flex items-center ">
             <div>
@@ -157,7 +185,7 @@ export default function Navbar(){
                 </Link>
             </div>
 
-            {/* <SearchBox userinfo={userinfo} /> */}
+            <SearchBox />
             </div>
 
             <ul className="items-center hidden font-[700] xl:flex pl-5 ">
@@ -167,9 +195,10 @@ export default function Navbar(){
             
             <button className="rounded-lg hidden mt-2 lg:mt-0  border-2 border-[#ED1B24] md:flex justify-between items-center  overflow-hidden ">
                 <p
-                onClick={() => setLanguage("bn")}
+                onClick={() => changelang("bn")}
                 className={`py-[4px] px-3 hover:bg-gray-300 hover:text-black ${
-                    language == "bn"
+                    language === "bn"
+                    
                     ? "bg-[#ED1B24] text-white"
                     : " text-black"
                 }`}
@@ -177,9 +206,9 @@ export default function Navbar(){
                 বাং
                 </p>
                 <p
-                onClick={() => setLanguage("en")}
+                onClick={() => changelang("en")}
                 className={`py-[6px] px-2 text-sm hover:bg-gray-200 hover:text-black ${
-                    language == "en"
+                    language === "en"
                     ? "bg-[#ED1B24] text-white"
                     : " text-black"
                 }`}
@@ -403,11 +432,10 @@ export default function Navbar(){
                         </button>
                     </div>
                     </div>
-                    {/* <SearchMobile
-                    userinfo={userinfo}
+                    <SearchMobile
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
-                    /> */}
+                    />
                     <nav>
                     <ul className="space-y-4">
                         {menuItem}

@@ -1,5 +1,5 @@
 "use client";
-import { Tab } from "@headlessui/react";
+import { Tab, TabGroup } from "@headlessui/react";
 import { useRef } from "react";
 import Link from "next/link";
 import CourseCard from "../courses/CourseCard";
@@ -43,18 +43,18 @@ export default function Homecourses({course}) {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
           
         }
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
         }
       },
       {
@@ -97,7 +97,7 @@ export default function Homecourses({course}) {
       </h3>
 
       <div className="px-2 py-5 mx-auto md:py-16 sm:px-0">
-        <Tab.Group>
+        <TabGroup>
           <div className="justify-between md:flex">
             <Tab.List className="flex p-1 mx-auto overflow-x-auto text-black border rounded-lg md:space-x-5 md:w-10/12 whitespace-nowrap">
               {cat.map((cat, idx) =>(
@@ -180,7 +180,7 @@ export default function Homecourses({course}) {
               ))
             }
           </Tab.Panels>
-        </Tab.Group>
+        </TabGroup>
       </div>
     </div>
     

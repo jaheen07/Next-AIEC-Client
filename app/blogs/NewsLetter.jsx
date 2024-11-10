@@ -1,10 +1,11 @@
 "use client";
 import newsletter from "@/public/newsLetter.svg";
 // import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { MailOutlined } from "@ant-design/icons";
 import ExportedImage from "next-image-export-optimizer";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const NewsLetter = () => {
   const  language  = "en"
@@ -60,6 +61,8 @@ const NewsLetter = () => {
       setError("An error occurred while subscribing. Please try again later.");
     }
   };
+
+  useEffect(() => sendGTMEvent({event: 'blogpageviwed', value: 'blogs' }))
 
   return (
     <>

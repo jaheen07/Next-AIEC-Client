@@ -8,6 +8,7 @@ import ExportedImage from 'next-image-export-optimizer';
 
 
 export default function HeroAria(){
+ 
     const gradientColor =
   "linear-gradient(34.98deg, #E9E5FD -6.94%, #BBEAF2 42.2%, rgba(233, 229, 253, 7.96) 110.23% )";
   const language = 'en';

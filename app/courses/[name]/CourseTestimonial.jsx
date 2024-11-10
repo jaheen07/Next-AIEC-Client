@@ -2,16 +2,18 @@
 import { Suspense, useEffect, useState } from "react";
 import Slider from "react-slick";
 import { CheckCircleOutlined } from "@ant-design/icons";
-import Testing from "./Testing";
+import Testing from "@/app/Home/Testing";
 
-export default function HomeTestimonial() {
+export default function CourseTestimonial(course_name) {
     const [feedback,setfeedback] = useState();
     useEffect(()=> {
         fetch('https://server.aiexpertcareer.com/feedback')
         .then((res)=>res.json())
         .then(data => setfeedback(data));
     },[]);
-  let  language  = "en";  
+  let  language  = "en";
+  
+  const c = feedback?.filter((e) => (e.destination_page === course_name));
   var settings = {
     
     autoplay: true,
@@ -63,15 +65,16 @@ export default function HomeTestimonial() {
   };
     return(
     <div className="mt-[80px] mb-[35px] relative">
+      {c == [] ? 
       <h3 className="text-center font-bold text-[30px]">
         {language === "bn" ? "শিক্ষার্থীরা যা বলছেন" : "Our Testimonial"}
-      </h3>
-      {feedback? "":<Testing/>}
+      </h3>: "" }
+      
+      
       <div className="mx-auto ">
         <Slider {...settings}>
-          {feedback?.map((e) => (
-            e.destination_page === "home" || e.show_on_home === true ?
-            (   <div key={e._id} className="">
+          {c?.map((e) => (
+             <div key={e._id} className="">
                     <div  className="p-10 m-4 bg-slate-50 shadow-[0_-5px_30px_rgba(217,217,217,217)] rounded-[20px] text-center mt-[120px] relative">
                         <span className="absolute left-[16px] top-[-15px]">
                             <CheckCircleOutlined className="text-4xl text-black"/>
@@ -89,12 +92,15 @@ export default function HomeTestimonial() {
                     </div>
                 </div>
                 
-            ):""
-          ))}
+            )
+          )}
         </Slider>
       </div>
       
     </div>
-    
     );
 };
+
+
+
+

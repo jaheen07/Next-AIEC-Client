@@ -4,6 +4,7 @@ import Link from "next/link";
 // import { FaArrowRight, FaCommentAlt, FaThumbsUp } from "react-icons/fa";
 // import { AiFillEye } from "react-icons/ai";
 import axios from "axios";
+import { myFont }  from "../layout";
 
 const BlogCard = ({ blog }) => {
   const formatViewCount = (view) => {
@@ -36,7 +37,7 @@ const BlogCard = ({ blog }) => {
           height="1"
         />
       </figure>
-      <div className="flex flex-col items-center justify-center space-y-4 ">
+      <div className={`${myFont.className} flex flex-col items-center justify-center space-y-4 `}>
         <Link href={`/blogs/${blog.blogName}`} onClick={incrementViewCount}>
           {/* Font bold */}
           <h2 className="font-bold text-[18px] text-center li-ador-noirrit-semibold">{blog.blogName}</h2> 

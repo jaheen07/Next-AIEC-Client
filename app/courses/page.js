@@ -1,7 +1,10 @@
-export default function page(params) {
+
+import Allcourses from "./Allcourses";
+
+export default function page() {
     return(
         <div>
-            skfslfks
+            <Allcourses/>
         </div>
     )
 };

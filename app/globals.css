@@ -3,8 +3,42 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@font-face {
+  font-family: 'Li Ador Noirrit Light';
+  src: url('./fonts/Li\ Ador\ Noirrit\ Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  unicode-range: U+0980-09FF, U+200C-200D;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Li Ador Noirrit Regular';
+  src: url('./fonts/Li\ Ador\ Noirrit\ Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  unicode-range: U+0980-09FF, U+200C-200D;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Li Ador Noirrit SemiBold';
+  src: url('./fonts/Li\ Ador\ Noirrit\ SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  unicode-range: U+0980-09FF, U+200C-200D;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Li Ador Noirrit Bold';
+  src: url('./fonts/NotoSerifBengali-Bold.ttf') format('truetype');
+  font-weight: 700; /* Use 700 for bold */
+  font-style: normal;
+  unicode-range: U+0980-09FF, U+200C-200D;
+  font-display: swap;
+}
 :root {
-  font-family: 'Inter Tight', 'Li Ador Noirrit Regular','Li Ador Noirrit SemiBold','Li Ador Noirrit Bold', sans-serif;
+  font-family: 'Inter Tight','Li Ador Noirrit Light', 'Li Ador Noirrit Regular','Li Ador Noirrit SemiBold','Li Ador Noirrit Bold', sans-serif;
   line-height: 1.5;
   font-stretch: condensed !important;
   color: #000000cc;
@@ -21,6 +55,16 @@
   -webkit-overflow-scrolling: touch;  
 }
 
+.li-ador-noirrit-bold {
+  font-family: "Li Ador Noirrit Bold" !important;
+}
+.li-ador-noirrit-semibold {
+  font-family: "Li Ador Noirrit SemiBold" !important;
+}
+
+body {
+  font-family: 'Inter Tight', 'Li Ador Noirrit Regular','Li Ador Noirrit SemiBold','Li Ador Noirrit Bold', sans-serif;
+}
 
 
 
@@ -66,8 +110,8 @@
 }
 
 .blobs {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 150px;
   position: absolute;
   overflow: hidden;
   border-radius: 70px;
@@ -222,5 +266,24 @@
 
 .avatar > div{
   aspect-ratio: 0 !important;
+  
+}
+
+
+.curved-underline{
+  position: relative;
+  display: inline-block;
+}
+
+.curved-underline::before {
+  content: "";
+    position: absolute;
+    height: 20px;
+    width: 120%;
+    left: -15px;
+    top: 35px;
+    border-top: 3px solid red;
+    border-radius: 50%;
+    
   
 }

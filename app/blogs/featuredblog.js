@@ -6,18 +6,20 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Testing from "../Home/Testing";
 
 const FeaturedBlogs = () => {
-    const [blogs, setBlogs] = useState([]);
+  const [featuredBlogs, setBlogs] = useState();
   useEffect(() => {
     fetch("https://server.aiexpertcareer.com/blogs")
         .then((response) => response.json())
         .then((data) => {
-        setBlogs(data);
+          const featured = data.filter((b) => b.category === "Featured");
+        setBlogs(featured);
         });
-    }, []);
+  }, []);
 
-    const featuredBlogs = blogs.filter((b) => b.category === "Featured");
+  
     
   const language  = "en";
   
@@ -33,12 +35,16 @@ const FeaturedBlogs = () => {
     initialSlide: 1,
     arrows:false,
   }
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
   
   return (
     <div>
+      {featuredBlogs?"": <Testing/>}
       <Slider {...settings}>
         {featuredBlogs?.map((b, i) => (
-            
           <div key={i} className="bg-[#de858500] pb-10 ">
             <div className=" mb-[35px] relative">
               <div className="grid lg:grid-cols-2 items-center gap-4 mt-[100px]">
